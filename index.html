@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,400;1,300&family=Bebas+Neue&family=Oswald:wght@200&family=Roboto:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>Conversor de MEDIDAS</title>
+</head>
+
+<body>
+    <div class="geral">
+        <header class="cabecalho">
+            <h1>FAST<span>CONVERSION</span></h1>
+            <nav>
+            <ul>
+                <li><a href="https://www.instagram.com/jguilhermesl/"><i class="fab fa-instagram"></i></li></a>
+                <li><a href="#"><i class="fab fa-github"></i></li></a>
+                <li><a href="#"><i class="fab fa-facebook"></i></li></a>
+            </ul>
+        </nav>
+            
+        </header>
+        <div class="titulo">
+            <h1>Conversão rápida</h1>
+            <p>Acesse nossos conversores de medidas e transforme seus valores da forma mais fácil! Converta unidades de comprimentos, volumes, áreas e mais!</p>
+        </div>
+        <div class="flex-box">
+            <div class="caixa-conversor velocidade">
+                <div class="caixa-cima">
+                    <h1 class="caixa-cabecalho">VELOCIDADE</h1>
+                </div>
+                <div class="caixa-principal">
+                    <div class="container">
+                        <label for="select1">Converter de...</label>
+                        <input class="conversao" id="inputVelocidade" class="inputConversor" placeholder="1" type="number">
+                        <select name="select1" id="selectVelocidade">
+                            <option>m/s</option>
+                            <option>km/h</option>
+                        </select>
+                        <label for="select2">Converter para...</label>
+                        <select name="select2" id="selectParaVelocidade">
+                            <option>km/h</option>
+                            <option>m/s</option>
+                        </select>
+                       <p id="textoVelocidade">3,6</p>
+                       <button class="botao" id="botaoVelocidade" onclick="ativarVelocidade()">Converter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="caixa-conversor comprimento">
+                <div class="caixa-cima">
+                    <h1 class="caixa-cabecalho">COMPRIMENTO</h1>
+                </div>
+                <div class="caixa-principal">
+                    <div class="container">
+                        <label for="select3">Converter de...</label>
+                        <input class="conversao" id="inputComprimento" class="inputConversor" placeholder="1" type="number">
+                        <select name="select3" id="selectComprimento">
+                            <option id="km">kilômetro (km)</option>
+                            <option>hectômetro (hm)</option>
+                            <option>decâmetro (dam))</option>
+                            <option>metro (m)</option>
+                            <option>decímetro (dm)</option>
+                            <option>centímetro (cm)</option>
+                            <option>milímetro (mm)</option>
+                        </select>
+                        <label for="select4">Converter para...</label>
+                        <select name="select4" id="selectParaComprimento">
+                            <option id="metro">metro (m)</option>
+                            <option>kilômetro (km)</option>
+                            <option>decímetro (dm)</option>
+                            <option>centímetro (cm)</option>
+                            <option>milímetro (mm)</option>
+                            <option>hectômetro (hm)</option>
+                            <option>decâmetro (dam)</option>
+                        </select>
+                        <p id="textoComprimento">1000</p>
+                       <button class="botao" id="botaoComprimento" onclick="ativarComprimento()">Converter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="caixa-conversor Area">
+                <div class="caixa-cima">
+                    <h1 class="caixa-cabecalho">ÁREA</h1>
+                </div>
+                <div class="caixa-principal">
+                    <div class="container">
+                        <label for="select-Area">Converter de...</label>
+                        <input class="conversao" class="inputConversor" id="inputArea"placeholder="1" type="number">
+                        <select id="selectArea" name="select-Area"> 
+                            <option>metro quadrado (m²)</option>
+                            <option>centímetro quadrado (cm²)</option>
+                        </select>
+                        <label for="select-Area2">Converter para...</label>
+                        <select name="select-Area2" id="selectParaArea">
+                            <option>centímetro quadrado (cm²)</option>
+                            <option>metro quadrado (m²)</option>
+                        </select>
+                        <p id="textoArea">10000</p>
+                       <button class="botao" id="botaoArea" onclick="ativarArea()">Converter</button>
+                    </div>
+                </div>
+            </div>
+            <div class="caixa-conversor volume">
+                <div class="caixa-cima">
+                    <h1 class="caixa-cabecalho">VOLUME</h1>
+                </div>
+                <div class="caixa-principal">
+                    <div class="container">
+                        <label for="select-volume">Converter de...</label>
+                        <input class="conversao" id="inputVolume" class="inputConversor" placeholder="1" type="number">
+                        <select name="select-volume" id="selectVolume">
+                            <option>metro cúbico (m³)</option>
+                            <option>centímetro cúbico (cm³)</option>
+                        </select>
+                        <label for="select-volume2">Converter para...</label>
+                        <select name="select-volume2" id="selectParaVolume">
+                            <option>litro (l)</option>
+                            <option>mililitro (ml)</option>
+                        </select>
+                        <p id="textoVolume">1000</p>
+                       <button class="botao" id="botaoVolume" onclick="ativarVolume()">Converter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
